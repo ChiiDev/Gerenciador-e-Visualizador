@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               children: <Widget>[
 
-                //Primeira repartição da tela conde ta o logo, container laranja
+                //Primeira repartição da tela conde ta o logO
                 Container(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height/2.5,
@@ -63,7 +63,22 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Container(height: 60),
+                      Container(
+                        height: 60,
+                        child: Padding(
+                          //CRIANDO UMA OPÇÃO PARA ACESSAR SEM FAZER LOGIN
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(children: <Widget>[
+                            Icon(Icons.arrow_forward, size: 15, color: Colors.white),
+                            Text('Continuar sem cadastro',
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ]),
+                        ),
+                      ),
                       Align(
                         alignment: Alignment.center,
                         child: Padding(
@@ -85,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: Text('Login',
                             style: TextStyle(
                                 color:  Colors.white,
-                                fontSize: 40
+                                fontSize: 20
                             ),
                           ),
                         ),
@@ -255,3 +270,7 @@ class _LoginPageState extends State<LoginPage> {
 //uma porcentagem do tamanho da tela, o forgot password vem pra baixo
 //Outro problema é que não dá pra usar esse design ja q qnd clica pra digitar dá
 //o erro 'bottom overflowed by 225px'. Tentar resolver isso.
+
+
+//Nota dia 13-05-19 - Parei na parte de criar uma opção para o usuario acessar a
+//tela principal sem realizar o login. RETORMAR DAQUI!

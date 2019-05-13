@@ -66,10 +66,10 @@ class _CadastroPageState extends State<CadastroPage> {
                   Container(
                     width: MediaQuery.of(context).size.width/1.2,
                     height: MediaQuery.of(context).size.width/8,
-                    margin: EdgeInsets.only(top: 30),
+                    margin: EdgeInsets.only(top: 20),
                     // este padding aqui arruma o text dado um bom posicionamento.
                     padding: EdgeInsets.only(
-                        top: 6, left: 16, right: 16, bottom: 10
+                        top: 1, left: 16, right: 16, bottom: 8
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
@@ -87,13 +87,13 @@ class _CadastroPageState extends State<CadastroPage> {
                     child: TextField(
                       //autofocus: false,
                       decoration: InputDecoration(
-                        icon: Icon(Icons.mail, color: Colors.grey),
+                        icon: Icon(Icons.format_color_text, color: Colors.grey),
                         border: InputBorder.none,
                         hintText: 'Nome',
                       ),
                     ),
                   ),
-                  //container do campo Email
+                  //container do campo
                   Container(
                     width: MediaQuery.of(context).size.width/1.2,
                     height: MediaQuery.of(context).size.width/8,
@@ -118,7 +118,7 @@ class _CadastroPageState extends State<CadastroPage> {
                     child: TextField(
                       //autofocus: false,
                       decoration: InputDecoration(
-                        icon: Icon(Icons.mail, color: Colors.grey),
+                        icon: Icon(Icons.vpn_key, color: Colors.grey),
                         border: InputBorder.none,
                         hintText: 'Senha',
                       ),
@@ -148,7 +148,7 @@ class _CadastroPageState extends State<CadastroPage> {
                     //campo para escrever
                     child: TextField(
                       decoration: InputDecoration(
-                        icon: Icon(Icons.vpn_key, color: Colors.grey),
+                        icon: Icon(Icons.mail, color: Colors.grey),
                         border: InputBorder.none,
                         hintText: 'Email',
                       ),

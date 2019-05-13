@@ -50,7 +50,7 @@ class _MainPageState extends State<MainPage> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => (LoginApp())));
                   },
-                  child: Text('Voltar',
+                  child: Text('LOGIN',
                     style: TextStyle(color: Colors.white, fontSize: 24),),
                 ),
               ),
