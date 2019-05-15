@@ -63,20 +63,23 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Container(
-                        height: 60,
-                        child: Padding(
-                          //CRIANDO UMA OPÇÃO PARA ACESSAR SEM FAZER LOGIN
-                          padding: const EdgeInsets.all(8.0),
-                          child: Row(children: <Widget>[
-                            Icon(Icons.arrow_forward, size: 15, color: Colors.white),
-                            Text('Continuar sem cadastro',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white,
+                      GestureDetector(
+                        onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => (Profile())));},
+                        child: Container(
+                          height: 60,
+                          child: Padding(
+                            //CRIANDO UMA OPÇÃO PARA ACESSAR SEM FAZER LOGIN
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(children: <Widget>[
+                              Icon(Icons.arrow_forward, size: 15, color: Colors.white),
+                              Text('Continuar sem cadastro',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.white,
+                                ),
                               ),
-                            ),
-                          ]),
+                            ]),
+                          ),
                         ),
                       ),
                       Align(
@@ -266,11 +269,9 @@ class _LoginPageState extends State<LoginPage> {
   }
 }
 
-//Notas... então esse Align ta complicando. Se tento setar o tamanho do botão para
-//uma porcentagem do tamanho da tela, o forgot password vem pra baixo
-//Outro problema é que não dá pra usar esse design ja q qnd clica pra digitar dá
-//o erro 'bottom overflowed by 225px'. Tentar resolver isso.
-
-
 //Nota dia 13-05-19 - Parei na parte de criar uma opção para o usuario acessar a
 //tela principal sem realizar o login. RETORMAR DAQUI!
+
+//Nota dia 14-05-19 - Eu terminei o acesso. Agora criar o design para a página principal! Incrementar o menu agora.
+
+//Nota dia 15-05-19 - Criando menu na tela principal. Na próxima tem q utilizar das dicas recebidas para alterar o menu.

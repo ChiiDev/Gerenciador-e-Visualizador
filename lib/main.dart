@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'cadastro.dart';
 import 'login.dart';
+import 'package:tccgerenciadorapp/constantes';
 
 void main() => runApp(Profile());
 
@@ -34,6 +35,22 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: new AppBar(
+        title: new Text("hye"),
+        actions: <Widget>[
+          PopupMenuButton<String>(
+            onSelected: choiceAction,
+            itemBuilder: (BuildContext context){
+              return Constants.choices.map((String choice){
+                return PopupMenuItem<String>(
+                  value: choice,
+                  child: Text(choice),
+                );
+              }).toList();
+            },
+          )
+        ],
+      ),
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
@@ -73,5 +90,8 @@ class _MainPageState extends State<MainPage> {
         ),
       ),
     );
+  }
+  void choiceAction(String choice){
+    print("WORKING");
   }
 }
